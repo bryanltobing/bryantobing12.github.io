@@ -3,6 +3,7 @@ body
     background: url('bg.jpg');
     background-size: cover;
     font-family: 'Lato', sans-serif;
+    width: 100%;
 }
 
 .header h3
