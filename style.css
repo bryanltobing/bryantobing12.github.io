@@ -1,0 +1,55 @@
+body
+{
+    background: url('bg.jpg');
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+}
+
+.header h3
+{
+    color:whitesmoke;
+    padding: 18px;
+    text-align: center;
+}
+
+.content .box
+{
+    background-color: whitesmoke;
+    padding:20px;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.content .box img
+{
+    border-radius: 90px;
+    float: left;
+}
+
+.content .box button
+{
+    background-color: #101010;
+    border:none;
+    padding:13px;
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+
+.content .box button:hover 
+{
+    background-color: white;
+    color: black;
+}
+
+.content .box .mantap p
+{
+    margin-left: 400px;
+}
+
+.mantap1
+{
+    margin-left: 400px;
+}
