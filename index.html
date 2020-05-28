@@ -3,29 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobax</title>
+    <title>Bryan Lumbantobing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
 </head>
     <style>
-        .content{
-            max-width: 1920px;
-            margin: 0 auto;
-            background-color: #faf3f3;
-            height: 300px;
-            padding-top:250px;
+        body {
+            font-family: 'Chelsea Market', cursive;
         }
-        .content > h1{
-            width: 185px;
-            padding: 10px;
-            color: white;
-            background-color: black;
-            margin: 0 auto;
-            font-size: 2em;
-            border-radius: 5px;
+        .content {
+            max-width: 1200px;
+            margin : 0 auto;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 40.25%;
+            height: 0;
+        }
+
+        .content iframe {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 1380px) {
+            .content {
+                padding-bottom: 47.65%;
+            }
+        }
+
+
+                /* On screens that are 992px or less, set the background color to blue */
+        @media screen and (max-width: 992px) {
+            .content {
+                padding-bottom: 52.65%;
+            }
+        }
+
+        /* On screens that are 600px or less, set the background color to olive */
+        @media screen and (max-width: 600px) {
+            .content {
+                padding-bottom: 52.65%;
+            }
+            h1 {
+                font-size: 22px;
+            }
         }
     </style>
 <body>
     <div class="content">
-        <h1>Coming Soon</h1>
+        <h1>my favorite music video</h1>
+        <iframe width="1000" height="550" src="https://www.youtube.com/embed/_ZyD4n5zqxA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; &showinfo=0" allowfullscreen></iframe>    
     </div>
 </body>
 </html>
