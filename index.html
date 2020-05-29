@@ -7,6 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
 </head>
     <style>
+        h1 {
+            margin: 0;
+            padding: 3px;
+        }
         body {
             font-family: 'Chelsea Market', cursive;
         }
@@ -22,7 +26,7 @@
 
         .content iframe {
             position: absolute;
-            top: 50px;
+            top: 75px;
             left: 0;
             width: 100%;
             height: 100%;
@@ -55,6 +59,36 @@
 <body>
     <div class="content">
         <h1>my favorite music video</h1>
-        <iframe width="1000" height="550" src="https://www.youtube.com/embed/_ZyD4n5zqxA?start=66" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
+        <button id="changeModeToDark">Dark Mode</button> 
+        <button id="changeModeToLight" style="display: none;">Light Mode</button> 
+        <iframe width="1000" height="550" src="https://www.youtube.com/embed/_ZyD4n5zqxA?start=66" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+    </div>
+
+
+    <script>
+        let theme = 0;
+
+        var buttonDark = document.querySelector('#changeModeToDark');
+        var buttonLight = document.querySelector('#changeModeToLight');
+
+        buttonDark.addEventListener('click', () => {
+            document.body.style.backgroundColor = "black";
+            document.querySelector('h1').style.color = "white";
+            buttonDark.style.display = "none";
+            buttonLight.style.display = "inline";
+        });
+
+        buttonLight.addEventListener('click', () => {
+            document.body.style.backgroundColor = "white";
+            document.querySelector('h1').style.color = "black";
+            buttonLight.style.display = "none";
+            buttonDark.style.display = "inline";
+        });
+
+        
+        
+
+
+    </script>
 </body>
 </html>
