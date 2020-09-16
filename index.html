@@ -84,6 +84,7 @@
         var buttonLight = document.querySelector('#changeModeToLight');
 
         buttonDark.addEventListener('click', () => {
+            localStorage.setItem('theme', 'dark');
             document.body.style.backgroundColor = "black";
             document.querySelector('h1').style.color = "white";
             buttonDark.style.display = "none";
@@ -91,16 +92,25 @@
         });
 
         buttonLight.addEventListener('click', () => {
+            localStorage.setItem('theme', 'light');
             document.body.style.backgroundColor = "white";
             document.querySelector('h1').style.color = "black";
             buttonLight.style.display = "none";
             buttonDark.style.display = "inline";
         });
 
+        if(localStorage.getItem('theme') === 'dark') {
+            document.body.style.backgroundColor = "black";
+            document.querySelector('h1').style.color = "white";
+            buttonDark.style.display = "none";
+            buttonLight.style.display = "inline";
+        } else {
+            document.body.style.backgroundColor = "white";
+            document.querySelector('h1').style.color = "black";
+            buttonLight.style.display = "none";
+            buttonDark.style.display = "inline";
+        }
         
-        
-
-
     </script>
 </body>
 </html>
