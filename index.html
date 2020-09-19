@@ -3,114 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bryan Lumbantobing</title>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_dark.css">
     <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
-    <style>
-        h1 {
-            margin: 0;
-            padding: 3px;
-        }
-        body {
-            font-family: 'Chelsea Market', cursive;
-        }
-        .content {
-            max-width: 1200px;
-            margin : 0 auto;
-            text-align: center;
-            text-transform: uppercase;
-            position: relative;
-            padding-bottom: 40.25%;
-            height: 0;
-        }
-
-        .content iframe {
-            position: absolute;
-            top: 75px;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        @media screen and (max-width: 1380px) {
-            .content {
-                padding-bottom: 47.65%;
-            }
-        }
-
-
-                /* On screens that are 992px or less, set the background color to blue */
-        @media screen and (max-width: 992px) {
-            .content {
-                padding-bottom: 52.65%;
-            }
-        }
-
-        /* On screens that are 600px or less, set the background color to olive */
-        @media screen and (max-width: 600px) {
-            .content {
-                padding-bottom: 52.65%;
-            }
-            h1 {
-                font-size: 22px;
-            }
-        }
-
-        #changeModeToDark {
-            background-color: black;
-            color: white;
-            cursor: pointer;
-        }
-        #changeModeToLight {
-            background-color: white;
-            color: black;
-            cursor: pointer;
-        }
-
-    </style>
 <body>
-    <div class="content">
-        <h1>my favorite music video</h1>
-        <button id="changeModeToDark">Dark Mode</button> 
-        <button id="changeModeToLight" style="display: none;">Light Mode</button> 
-        <iframe width="1000" height="550" src="https://www.youtube.com/embed/_ZyD4n5zqxA?start=67" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+    <div class="first">
+        <div class="wrapper">
+            <div class="project-list">
+                <h1>My Recent Project</h1>
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://ceretindah.com/">PT Maju Kita Bersama</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://olisdel.herokuapp.com/">Online Library</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://umkmtaput.herokuapp.com/">UMKM Taput</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://coronavirusdisease.netlify.app/">Covid Monitor Web</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://bryan-weather-application.herokuapp.com/">Weather app</a>
+                    </li>
+                </ul>
+                <a href="https://github.com/bryantobing12"><button>More Open Source Project</button></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="second">
+        <div class="wrapper">
+            <div class="mode">
+                <h3 class="dark" onclick="setDarkMode(true)">Dark mode</h3>
+                <h3 class="light" onclick="setDarkMode(false)" >Light mode</h3>
+            </div>
+        </div>
     </div>
 
 
-    <script>
-        let theme = 0;
-
-        var buttonDark = document.querySelector('#changeModeToDark');
-        var buttonLight = document.querySelector('#changeModeToLight');
-
-        buttonDark.addEventListener('click', () => {
-            localStorage.setItem('theme', 'dark');
-            document.body.style.backgroundColor = "black";
-            document.querySelector('h1').style.color = "white";
-            buttonDark.style.display = "none";
-            buttonLight.style.display = "inline";
-        });
-
-        buttonLight.addEventListener('click', () => {
-            localStorage.setItem('theme', 'light');
-            document.body.style.backgroundColor = "white";
-            document.querySelector('h1').style.color = "black";
-            buttonLight.style.display = "none";
-            buttonDark.style.display = "inline";
-        });
-
-        if(localStorage.getItem('theme') === 'dark') {
-            document.body.style.backgroundColor = "black";
-            document.querySelector('h1').style.color = "white";
-            buttonDark.style.display = "none";
-            buttonLight.style.display = "inline";
-        } else {
-            document.body.style.backgroundColor = "white";
-            document.querySelector('h1').style.color = "black";
-            buttonLight.style.display = "none";
-            buttonDark.style.display = "inline";
-        }
-        
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>

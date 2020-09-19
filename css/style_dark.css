@@ -1,0 +1,23 @@
+#dark {
+    background-color: #262521;
+    color : lightyellow;
+}
+
+#dark a {
+    color: lightgoldenrodyellow;
+}
+
+#dark button {
+    background-color: darkgoldenrod;
+    color: lightgoldenrodyellow;
+    font-weight: normal;
+}
+
+/* mode */
+#dark .dark {
+    display: none;
+}
+
+#dark .light {
+    display: block;
+}

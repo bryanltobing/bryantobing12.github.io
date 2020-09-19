@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Chelsea Market', cursive;
+}
+
+body {
+    background-color: lightyellow;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-list {
+    padding: 40px;
+}
+
+.project-list ul {
+    margin-top: 20px;
+}
+
+.project-list li {
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+.project-list li:hover {
+    list-style-type: circle;
+}
+
+.project-list li a {
+    color: #363030;
+    text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    transition: margin-left 0.4s ease-in-out;
+}
+
+.project-list li a:hover {
+    margin-left: 20px;
+}
+
+.project-list button {
+    text-transform: uppercase;
+    margin-top: 20px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: padding 0.7s ease-in;
+}
+
+.project-list button:hover {
+    text-transform: uppercase;
+    margin-top: 20px;
+    padding: 50px;
+}
+
+/* Mode Setting */
+.mode {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+}
+
+.mode .light {
+    margin-top: 10px;
+    background-color: lightslategray;
+    color: white;
+    padding: 10px;
+    display: none;
+}
+
+.mode .light:hover {
+    font-weight: normal;
+}
+
+.mode .dark {
+    background-color: darkseagreen;
+    color: black;
+    padding: 10px;
+}
+
+.mode .dark:hover {
+    font-weight: normal;
+}
+
+
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .mode {
+        position: unset;
+    }
+
+    .project-list li a {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 12px;
+    }
+
+}
+
+
