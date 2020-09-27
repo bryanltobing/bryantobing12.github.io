@@ -21,3 +21,8 @@
 #dark .light {
     display: block;
 }
+
+/* Project list */
+#dark .project-list h4 a {
+    color : #b19cd9 ;
+}

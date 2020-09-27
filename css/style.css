@@ -87,6 +87,23 @@ body {
     font-weight: normal;
 }
 
+/* Working on */
+.blink_me {
+    animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.blink_me:hover {
+    animation: ease-in 2s linear;
+}
+
+
+
 
 @media only screen and (max-width: 600px) {
     h1{
@@ -104,6 +121,16 @@ body {
 
     h3 {
         font-size: 12px;
+    }
+
+    /* project list */
+    .project-list h4 {
+        margin-top: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+    .project-list .now {
+        display: block;
     }
 
 }
